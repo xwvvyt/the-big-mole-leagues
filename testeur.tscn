@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://c8bj8v404ma23" path="res://testbutton.gd" id="1_3n2w4"]
 [ext_resource type="Script" uid="uid://ck7f40u7d8r64" path="res://inventaire.gd" id="2_u5etl"]
 [ext_resource type="Script" uid="uid://cwyej08cs6er" path="res://rich_text_label.gd" id="3_4glt5"]
+[ext_resource type="Script" uid="uid://djsfrgovk02aj" path="res://node_3d.gd" id="4_u5etl"]
 
 [node name="Node2D" type="Node2D" unique_id=1963812452]
 
@@ -21,5 +22,10 @@ script = ExtResource("2_u5etl")
 offset_right = 274.0
 offset_bottom = 137.0
 script = ExtResource("3_4glt5")
+
+[node name="Atome" type="Node3D" parent="." unique_id=576378530]
+script = ExtResource("4_u5etl")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Atome" unique_id=914419578]
 
 [connection signal="pressed" from="addHydro" to="addHydro" method="_on_pressed"]
