@@ -1,0 +1,131 @@
+[gd_scene format=3 uid="uid://bqx42na2f0lh1"]
+
+[ext_resource type="Script" uid="uid://idfak4w6vu07" path="res://button.gd" id="1_n5ude"]
+[ext_resource type="Texture2D" uid="uid://tq46uwm56xqw" path="res://Icons/Hydrogen.png" id="2_y4yjw"]
+[ext_resource type="Script" uid="uid://ddn7uyfxfhgeh" path="res://atomes.gd" id="3_waa4j"]
+[ext_resource type="Texture2D" uid="uid://bqwxwkxie101h" path="res://Icons/carbon.png" id="4_ok7cu"]
+[ext_resource type="Texture2D" uid="uid://6lr5o6y4l0uw" path="res://Icons/Nitrogen.png" id="5_irxef"]
+[ext_resource type="Texture2D" uid="uid://ba5x4hb0v0hvi" path="res://Icons/oxygen.jpg" id="6_e2l4f"]
+
+[sub_resource type="Theme" id="Theme_n5rqp"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_gs482"]
+
+[node name="UI" type="Node2D" unique_id=1483138725]
+
+[node name="PanelInventaire" type="Panel" parent="." unique_id=1344242164]
+offset_left = -2.0
+offset_top = 563.0
+offset_right = 1147.0
+offset_bottom = 649.0
+
+[node name="PanelAtomes" type="Panel" parent="." unique_id=642724340]
+offset_left = 1041.0
+offset_top = 126.0
+offset_right = 1138.0
+offset_bottom = 466.0
+
+[node name="Buttons" type="Control" parent="." unique_id=28071328]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1053.0
+offset_top = 145.0
+offset_right = 1093.0
+offset_bottom = 185.0
+
+[node name="ButtonHydrogene" type="Button" parent="Buttons" unique_id=810111380]
+layout_mode = 0
+offset_right = 69.0
+offset_bottom = 60.0
+theme = SubResource("Theme_n5rqp")
+text = "H"
+icon = SubResource("ViewportTexture_gs482")
+script = ExtResource("1_n5ude")
+
+[node name="ButtonCarbone" type="Button" parent="Buttons" unique_id=1418768726]
+layout_mode = 0
+offset_top = 73.0
+offset_right = 69.0
+offset_bottom = 133.0
+text = "C"
+
+[node name="ButtonAzote" type="Button" parent="Buttons" unique_id=20446313]
+layout_mode = 0
+offset_top = 152.0
+offset_right = 69.0
+offset_bottom = 212.0
+text = "N"
+
+[node name="ButtonOxygen" type="Button" parent="Buttons" unique_id=1800396093]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 233.0
+offset_right = 73.0
+offset_bottom = 293.0
+text = "O"
+
+[node name="LabelInventaire" type="Label" parent="." unique_id=918724341]
+offset_left = 7.0
+offset_top = 537.0
+offset_right = 87.0
+offset_bottom = 564.0
+theme_override_colors/font_color = Color(0.38039216, 0.8666667, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 0, 0, 1)
+text = "Inventaire"
+
+[node name="LabelAtome" type="Label" parent="." unique_id=1926116123]
+offset_left = 1059.0
+offset_top = 103.0
+offset_right = 1118.0
+offset_bottom = 126.0
+theme_override_colors/font_color = Color(0, 1, 1, 1)
+text = "Atomes"
+
+[node name="hydrogen" type="TextureRect" parent="." unique_id=434515706]
+offset_left = 1059.0
+offset_top = 145.0
+offset_right = 1116.0
+offset_bottom = 202.0
+texture = ExtResource("2_y4yjw")
+expand_mode = 1
+script = ExtResource("3_waa4j")
+
+[node name="carbon" type="TextureRect" parent="." unique_id=955314079]
+offset_left = 1060.0
+offset_top = 296.0
+offset_right = 1117.0
+offset_bottom = 353.0
+texture = ExtResource("4_ok7cu")
+expand_mode = 1
+script = ExtResource("3_waa4j")
+
+[node name="azote" type="TextureRect" parent="." unique_id=408300530]
+offset_left = 1059.0
+offset_top = 216.0
+offset_right = 1116.0
+offset_bottom = 273.0
+texture = ExtResource("5_irxef")
+expand_mode = 1
+script = ExtResource("3_waa4j")
+
+[node name="oxygen" type="TextureRect" parent="." unique_id=1066602915]
+offset_left = 1062.0
+offset_top = 377.0
+offset_right = 1119.0
+offset_bottom = 434.0
+texture = ExtResource("6_e2l4f")
+expand_mode = 1
+script = ExtResource("3_waa4j")
+
+[node name="rafting table" type="TextureRect" parent="." unique_id=1961529571]
+offset_left = 9.0
+offset_top = 16.0
+offset_right = 1030.0
+offset_bottom = 537.0
+script = ExtResource("3_waa4j")
+
+[node name="Panel" type="Panel" parent="rafting table" unique_id=664912805]
+layout_mode = 0
+offset_right = 1020.0
+offset_bottom = 519.0

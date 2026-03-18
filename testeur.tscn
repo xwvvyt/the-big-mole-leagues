@@ -15,6 +15,7 @@ text = "add hydrogene"
 script = ExtResource("1_3n2w4")
 
 [node name="Inventaire" type="Node2D" parent="." unique_id=277775275]
+visible = false
 script = ExtResource("2_u5etl")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=511254623]
