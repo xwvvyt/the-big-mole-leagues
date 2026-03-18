@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dbp5ogjfeb28x"]
 
-[ext_resource type="PackedScene" uid="uid://dre74xu30sskv" path="res://TypeLiaison.tscn" id="1_wtcfe"]
+[ext_resource type="PackedScene" uid="uid://dre74xu30sskv" path="res://Scenes/TypeLiaison.tscn" id="1_wtcfe"]
 [ext_resource type="PackedScene" uid="uid://rtvbjig18gg5" path="res://Element.tscn" id="2_0e48y"]
 
 [node name="Jeu" type="Node2D" unique_id=868007546]

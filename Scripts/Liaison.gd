@@ -4,7 +4,7 @@ var type_liaison := 0
 var atome1 := Element
 var atome2 := Element
 
-#Called when the node enters the scene tree for the first time.
+
 func _connecter(a: Element, b: Element) -> void:
 	if a._get_paires_libres() != 0 and b._get_paires_libres() != 0 :
 		print(a.type + " a été combiné avec " + b.type + " ! ")

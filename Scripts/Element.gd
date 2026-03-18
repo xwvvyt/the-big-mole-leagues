@@ -5,7 +5,7 @@ var ELEMENTS: Dictionary = {
 		"type": "Carbone",
 		"symbole": "C",
 		"max_liaisons": 4,
-		"liaisons_actuelles": 0
+		#"liaisons_actuelles": 0
 	},
 	"H": {
 		"type": "Hydrogene",

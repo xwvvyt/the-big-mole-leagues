@@ -19,10 +19,11 @@ config/icon="res://icon.svg"
 
 Inventaire="*uid://ck7f40u7d8r64"
 Element="*uid://drvjuo578an12"
+Molecule="*uid://cdqsebmlpjhac"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/drag_and_drop/plugin.cfg")
+enabled=PackedStringArray()
 
 [physics]
 
