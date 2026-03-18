@@ -1,0 +1,33 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="MoleculeCraft"
+run/main_scene="uid://cs0gp4fna5xxp"
+config/features=PackedStringArray("4.6", "Forward Plus")
+config/icon="res://icon.svg"
+
+[autoload]
+
+Inventaire="*uid://ck7f40u7d8r64"
+Element="*uid://drvjuo578an12"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/drag_and_drop/plugin.cfg")
+
+[physics]
+
+3d/physics_engine="Jolt Physics"
+
+[rendering]
+
+rendering_device/driver.windows="d3d12"

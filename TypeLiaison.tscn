@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dre74xu30sskv"]
+
+[ext_resource type="Script" uid="uid://brurrsl4cjw8o" path="res://Scripts/node_2d.gd" id="1_gjrpj"]
+
+[node name="TypeLiasion" type="Node" unique_id=2002690051]
+script = ExtResource("1_gjrpj")

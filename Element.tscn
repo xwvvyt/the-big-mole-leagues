@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://rtvbjig18gg5"]
+
+[ext_resource type="Script" uid="uid://drvjuo578an12" path="res://Scripts/Element.gd" id="1_jyg14"]
+[ext_resource type="Script" uid="uid://sx145h0s7yv3" path="res://Scripts/Hydrogene.gd" id="2_wf015"]
+[ext_resource type="Script" uid="uid://djywhh134s2ed" path="res://Scripts/Azote.gd" id="3_wf015"]
+[ext_resource type="Script" uid="uid://c27yv0s0gmpog" path="res://Scripts/Oxygene.gd" id="4_3dl8m"]
+[ext_resource type="Script" uid="uid://cuaf02pii2y53" path="res://Scripts/Carbone.gd" id="5_av8wj"]
+[ext_resource type="Script" uid="uid://bolnrd4wesop0" path="res://Scripts/Benzene.gd" id="6_av8wj"]
+
+[node name="Element" type="Node" unique_id=1255543238]
+script = ExtResource("1_jyg14")
+
+[node name="Hydrogene" type="Node" parent="." unique_id=1302154185]
+script = ExtResource("2_wf015")
+
+[node name="Azote" type="Node" parent="." unique_id=1025004795]
+script = ExtResource("3_wf015")
+
+[node name="Oxygène" type="Node" parent="." unique_id=1063041951]
+script = ExtResource("4_3dl8m")
+
+[node name="Carbone" type="Node" parent="." unique_id=1193324053]
+script = ExtResource("5_av8wj")
+
+[node name="Benzène" type="Node" parent="." unique_id=2008050235]
+script = ExtResource("6_av8wj")
