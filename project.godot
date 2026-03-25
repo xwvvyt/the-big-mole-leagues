@@ -20,10 +20,18 @@ config/icon="res://icon.svg"
 Inventaire="*uid://ck7f40u7d8r64"
 Element="*uid://drvjuo578an12"
 Molecule="*uid://cdqsebmlpjhac"
+Liaisons="*uid://dwbfy43fonnko"
 
 [editor_plugins]
 
 enabled=PackedStringArray()
+
+[input]
+
+_on_item_list_item_clicked={
+"deadzone": 0.2,
+"events": []
+}
 
 [physics]
 

@@ -3,11 +3,20 @@ extends Node
 
 var formules_valides: Dictionary = {
 	
+	"FakeMolecule": {
+		"nom": "FakeMolecule",
+		"formule": "H2O",
+		"elements": ["H", "H", "O"],
+		"liaisons": "HOdHOt",
+		"proprietes": "Masse molaire : 18.015 g/mol. Point de fusion : 0.00 °C. Point d'ebullition : 99.974 °C.",
+		"geometrieVSEPR": ""
+	},
+	
 	"H2O": {
 		"nom": "Eau",
 		"formule": "H2O",
 		"elements": ["H", "H", "O"],
-		"liaisons": ["SIMPLE", "SIMPLE"],
+		"liaisons": "HOsHOs",
 		"proprietes": "Masse molaire : 18.015 g/mol. Point de fusion : 0.00 °C. Point d'ebullition : 99.974 °C.",
 		"geometrieVSEPR": ""
 	},
@@ -16,7 +25,7 @@ var formules_valides: Dictionary = {
 		"nom": "Adenine",
 		"formule": "C5H5N5",
 		"elements": ["C", "C", "C", "C", "C", "H", "H", "H", "H", "H", "N", "N", "N", "N", "N"],
-		"liaisons": ["SIMPLE", "DOUBLE", "SIMPLE", "DOUBLE", "SIMPLE", "SIMPLE", "SIMPLE", "SIMPLE", "SIMPLE", "SIMPLE"],
+		"liaisons": "CCsCHsCHsCNdCNdCNdCNdCNsCNsCNsCNsCNsHNsHNsHNs",
 		"proprietes": "Masse molaire : 135.128 g/mol. Point de fusion : 360 °C (dec).",
 		"geometrieVSEPR": ""
 	},
