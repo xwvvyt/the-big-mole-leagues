@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bqwxwkxie101h" path="res://Icons/carbon.png" id="4_ok7cu"]
 [ext_resource type="Texture2D" uid="uid://6lr5o6y4l0uw" path="res://Icons/Nitrogen.png" id="5_irxef"]
 [ext_resource type="Texture2D" uid="uid://ba5x4hb0v0hvi" path="res://Icons/oxygen.jpg" id="6_e2l4f"]
+[ext_resource type="Script" uid="uid://dctqmjxrdgpay" path="res://crafting_table.gd" id="7_y4yjw"]
 
 [sub_resource type="Theme" id="Theme_n5rqp"]
 
@@ -24,6 +25,12 @@ offset_left = 1041.0
 offset_top = 126.0
 offset_right = 1138.0
 offset_bottom = 466.0
+
+[node name="PanelCaftingArea" type="Panel" parent="." unique_id=664912805]
+offset_left = 9.0
+offset_top = 16.0
+offset_right = 1029.0
+offset_bottom = 535.0
 
 [node name="Buttons" type="Control" parent="." unique_id=28071328]
 visible = false
@@ -118,14 +125,24 @@ texture = ExtResource("6_e2l4f")
 expand_mode = 1
 script = ExtResource("3_waa4j")
 
-[node name="rafting table" type="TextureRect" parent="." unique_id=1961529571]
+[node name="crafting table" type="TextureRect" parent="." unique_id=1961529571]
 offset_left = 9.0
 offset_top = 16.0
 offset_right = 1030.0
 offset_bottom = 537.0
-script = ExtResource("3_waa4j")
+expand_mode = 2
+script = ExtResource("7_y4yjw")
 
-[node name="Panel" type="Panel" parent="rafting table" unique_id=664912805]
+[node name="NbAtomes" type="Label" parent="crafting table" unique_id=565200632]
 layout_mode = 0
-offset_right = 1020.0
-offset_bottom = 519.0
+offset_left = 1032.0
+offset_top = 4.0
+offset_right = 1133.0
+offset_bottom = 82.0
+text = "test text
+"
+
+[node name="Panel" type="Panel" parent="crafting table/NbAtomes" unique_id=90469640]
+layout_mode = 0
+offset_right = 102.0
+offset_bottom = 80.0

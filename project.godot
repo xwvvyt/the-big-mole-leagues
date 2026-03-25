@@ -22,7 +22,7 @@ Element="*uid://drvjuo578an12"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/drag_and_drop/plugin.cfg")
+enabled=PackedStringArray()
 
 [physics]
 
