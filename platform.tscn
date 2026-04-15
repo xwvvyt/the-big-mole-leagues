@@ -3,16 +3,17 @@
 [ext_resource type="Script" uid="uid://j6xntl3aphye" path="res://platform.gd" id="1_mi635"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mi635"]
-size = Vector2(128, 127)
+size = Vector2(100, 100)
 
 [node name="platform" type="StaticBody2D" unique_id=1496572364 groups=["dropable"]]
 script = ExtResource("1_mi635")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=119129021]
-position = Vector2(64, 63.5)
+position = Vector2(50, 50)
 shape = SubResource("RectangleShape2D_mi635")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1902999377]
-offset_right = 128.0
-offset_bottom = 128.0
+custom_minimum_size = Vector2(64, 0)
+offset_right = 100.0
+offset_bottom = 100.0
 mouse_filter = 2

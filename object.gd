@@ -1,11 +1,12 @@
 extends Node2D
 
 var draggable = false
+signal atom_clicked(atom_node)
 var is_inside_dropable = false
 var body_ref
 var offset: Vector2
 var initialPos : Vector2
-
+var inventaire_id = null 
 
 func _process(delta):
 	if draggable:
@@ -13,6 +14,7 @@ func _process(delta):
 			initialPos = global_position
 			offset = get_global_mouse_position() - global_position
 			global.is_dragging = true
+			emit_signal("atom_clicked", self)
 		if Input.is_action_pressed("click"):
 			global_position = get_global_mouse_position() - offset
 		elif Input.is_action_just_released("click"):

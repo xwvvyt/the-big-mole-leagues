@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c5mktd160r615"]
 
-[ext_resource type="Script" uid="uid://bq8quejyckq3s" path="res://Scripts/ajouter.gd" id="1_7vbqu"]
+[ext_resource type="Script" uid="uid://dmfurugxeqr1l" path="res://main.gd" id="1_ptu66"]
 [ext_resource type="Texture2D" uid="uid://d30i0aeq3ndk1" path="res://krebs.png" id="2_5gf02"]
 [ext_resource type="Texture2D" uid="uid://cpay2otrb7jml" path="res://rutherford.png" id="3_ltuj3"]
 [ext_resource type="Texture2D" uid="uid://dc7hmtg88pngs" path="res://Dmitri_Mendeleev.jpg" id="4_47x13"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://dn0cuqu2plhc4" path="res://explosion-1-d/spritsheet.png" id="10_ye8py"]
 [ext_resource type="PackedScene" uid="uid://djtphaqk82p8o" path="res://platform.tscn" id="11_ptu66"]
 [ext_resource type="PackedScene" uid="uid://c7352puabbhsb" path="res://object.tscn" id="12_rcq3f"]
+[ext_resource type="Script" uid="uid://drjmy45m58l25" path="res://Scenes/item_list.gd" id="13_rcq3f"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_aga2u"]
 atlas = ExtResource("10_ye8py")
@@ -106,7 +107,7 @@ animations = [{
 }]
 
 [node name="Node2D" type="Node2D" unique_id=691045523]
-script = ExtResource("1_7vbqu")
+script = ExtResource("1_ptu66")
 
 [node name="addHydro" type="Button" parent="." unique_id=350026936]
 offset_left = 19.0
@@ -187,6 +188,7 @@ offset_bottom = 191.0
 script = ExtResource("6_dx0ov")
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="." unique_id=1234516854]
+visible = false
 offset_left = 828.0
 offset_top = 59.0
 offset_right = 981.0
@@ -259,37 +261,76 @@ scale = Vector2(1.4374998, 1.5703124)
 sprite_frames = SubResource("SpriteFrames_j0x43")
 autoplay = "default"
 
-[node name="platform" parent="." unique_id=1496572364 instance=ExtResource("11_ptu66")]
-position = Vector2(600, 44)
-
-[node name="platform2" parent="." unique_id=1232243290 instance=ExtResource("11_ptu66")]
-position = Vector2(750, 44)
-
-[node name="platform3" parent="." unique_id=413158982 instance=ExtResource("11_ptu66")]
-position = Vector2(900, 44)
-
 [node name="platform4" parent="." unique_id=635987519 instance=ExtResource("11_ptu66")]
-position = Vector2(599, 199)
+position = Vector2(570, 81)
 
 [node name="platform5" parent="." unique_id=624885499 instance=ExtResource("11_ptu66")]
-position = Vector2(749, 199)
+position = Vector2(693, 81)
 
 [node name="platform6" parent="." unique_id=2099746679 instance=ExtResource("11_ptu66")]
-position = Vector2(899, 199)
+position = Vector2(815, 81)
 
 [node name="platform7" parent="." unique_id=1511952340 instance=ExtResource("11_ptu66")]
-position = Vector2(599, 357)
+position = Vector2(570, 220)
 
 [node name="platform8" parent="." unique_id=2034698359 instance=ExtResource("11_ptu66")]
-position = Vector2(749, 357)
+position = Vector2(693, 220)
 
 [node name="platform9" parent="." unique_id=301537172 instance=ExtResource("11_ptu66")]
-position = Vector2(899, 357)
+position = Vector2(815, 220)
 
 [node name="object" parent="." unique_id=2103366820 instance=ExtResource("12_rcq3f")]
+visible = false
 position = Vector2(532, 287)
 
-[connection signal="pressed" from="addHydro" to="addHydro" method="_on_pressed"]
-[connection signal="pressed" from="addCarbone" to="addCarbone" method="_on_pressed"]
-[connection signal="pressed" from="addAzote" to="addAzote" method="_on_pressed"]
-[connection signal="pressed" from="addOxygene" to="addOxygene" method="_on_pressed"]
+[node name="ItemList" type="ItemList" parent="." unique_id=879877627]
+visible = false
+offset_left = 316.0
+offset_top = 29.0
+offset_right = 520.0
+offset_bottom = 258.0
+max_columns = 3
+same_column_width = true
+script = ExtResource("13_rcq3f")
+
+[node name="platform10" parent="." unique_id=1149081024 instance=ExtResource("11_ptu66")]
+position = Vector2(571, 344)
+
+[node name="platform11" parent="." unique_id=234443190 instance=ExtResource("11_ptu66")]
+position = Vector2(694, 344)
+
+[node name="platform12" parent="." unique_id=1507149949 instance=ExtResource("11_ptu66")]
+position = Vector2(816, 344)
+
+[node name="platform14" parent="." unique_id=570319966 instance=ExtResource("11_ptu66")]
+position = Vector2(937, 81)
+
+[node name="platform15" parent="." unique_id=854110396 instance=ExtResource("11_ptu66")]
+position = Vector2(937, 220)
+
+[node name="platform16" parent="." unique_id=2086911740 instance=ExtResource("11_ptu66")]
+position = Vector2(938, 344)
+
+[node name="platform17" parent="." unique_id=265280987 instance=ExtResource("11_ptu66")]
+position = Vector2(571, 466)
+
+[node name="platform18" parent="." unique_id=18266757 instance=ExtResource("11_ptu66")]
+position = Vector2(694, 466)
+
+[node name="platform19" parent="." unique_id=1222280913 instance=ExtResource("11_ptu66")]
+position = Vector2(816, 466)
+
+[node name="platform20" parent="." unique_id=1903936876 instance=ExtResource("11_ptu66")]
+position = Vector2(938, 466)
+
+[connection signal="pressed" from="addHydro" to="." method="_on_add_hydro_pressed"]
+[connection signal="pressed" from="addCarbone" to="." method="_on_add_carbone_pressed"]
+[connection signal="pressed" from="addAzote" to="." method="_on_add_azote_pressed"]
+[connection signal="pressed" from="addOxygene" to="." method="_on_add_oxygene_pressed"]
+[connection signal="pressed" from="addSoufre" to="." method="_on_add_soufre_pressed"]
+[connection signal="pressed" from="addSimple" to="." method="_on_add_simple_pressed"]
+[connection signal="pressed" from="addDouble" to="." method="_on_add_double_pressed"]
+[connection signal="pressed" from="addTriple" to="." method="_on_add_triple_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="Creer" to="." method="_on_creer_pressed"]
+[connection signal="item_clicked" from="ItemList" to="." method="_on_item_list_item_clicked"]
