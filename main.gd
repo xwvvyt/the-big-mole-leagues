@@ -20,6 +20,13 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	if Input.is_action_pressed("esc"):
+		selected_a = null
+		selected_b = null
+		atome_a_objet = null
+		atome_b_objet = null
+		for node in [$LiaisonA, $LiaisonB, $LiaisonComplete]:
+			node.hide()
 	for liaison in liaisons_visuelles:
 		var decalages = []
 		if liaison[2].size() == 1:
@@ -32,6 +39,7 @@ func _process(delta: float) -> void:
 			liaison[2][i].set_point_position(0, liaison[0].global_position + decalages[i])
 			liaison[2][i].set_point_position(1, liaison[1].global_position + decalages[i])
 
+var rng = RandomNumberGenerator.new() #genere un nombre aleatoire pour que, lorsque plusieurs atomes sont isntanciées, ils ne superposent pas
 
 func _on_add_hydro_pressed() -> void:
 	Inventaire.update_item("H")
@@ -42,6 +50,7 @@ func _on_add_hydro_pressed() -> void:
 	add_child(temp)
 	temp.inventaire_id = new_id
 	temp.atom_clicked.connect(_on_atom_clicked)
+	temp.global_position = Vector2(250 + rng.randf_range(-30.0, 30.0), 250+rng.randf_range(-30.0, 30.0))
 
 func _on_add_carbone_pressed() -> void:
 	Inventaire.update_item("C")
@@ -52,6 +61,8 @@ func _on_add_carbone_pressed() -> void:
 	add_child(temp)
 	temp.inventaire_id = new_id
 	temp.atom_clicked.connect(_on_atom_clicked)
+	temp.global_position = Vector2(250 + rng.randf_range(-30.0, 30.0), 250+rng.randf_range(-30.0, 30.0))
+
 
 func _on_add_azote_pressed() -> void:
 	Inventaire.update_item("N")
@@ -62,6 +73,7 @@ func _on_add_azote_pressed() -> void:
 	add_child(temp)
 	temp.inventaire_id = new_id
 	temp.atom_clicked.connect(_on_atom_clicked)
+	temp.global_position = Vector2(250 + rng.randf_range(-30.0, 30.0), 250+rng.randf_range(-30.0, 30.0))
 
 func _on_add_oxygene_pressed() -> void:
 	Inventaire.update_item("O")
@@ -72,6 +84,7 @@ func _on_add_oxygene_pressed() -> void:
 	add_child(temp)
 	temp.inventaire_id = new_id
 	temp.atom_clicked.connect(_on_atom_clicked)
+	temp.global_position = Vector2(250 + rng.randf_range(-30.0, 30.0), 250+rng.randf_range(-30.0, 30.0))
 
 func _on_add_soufre_pressed() -> void:
 	Inventaire.update_item("S")
@@ -82,6 +95,7 @@ func _on_add_soufre_pressed() -> void:
 	add_child(temp)
 	temp.inventaire_id = new_id
 	temp.atom_clicked.connect(_on_atom_clicked)
+	temp.global_position = Vector2(250 + rng.randf_range(-30.0, 30.0), 250+rng.randf_range(-30.0, 30.0))
 	
 var type_liaison = "SIMPLE"
 func _on_add_simple_pressed() -> void:
@@ -125,31 +139,41 @@ func _on_atom_clicked(atom_node) -> void:
 		var s = array_to_string(encore_un_array)
 		print(s)
 		temp_array.append(Liaisons.code_liaison[s])
-		#debut tracage de ligne, utilise Claude
+			#debut tracage de ligne, utilise Claude
 		var decalages = []
 		var couleur = Color.RED
+
 		if type_liaison == "SIMPLE":
-			decalages = [Vector2(0, 0)]
+			decalages = [0.0]
 			couleur = Color.RED
 		elif type_liaison == "DOUBLE":
-			decalages = [Vector2(0, -4), Vector2(0, 4)]
+			decalages = [-8.0, 8.0]
 			couleur = Color.YELLOW
 		elif type_liaison == "TRIPLE":
-			decalages = [Vector2(0, -6), Vector2(0, 0), Vector2(0, 6)]
+			decalages = [-10.0, 0.0, 10.0]
 			couleur = Color.CYAN
+		var dir = (atome_b_objet.global_position - atome_a_objet.global_position).normalized()
+		if dir == Vector2.ZERO:
+			return
+		var perp = Vector2(-dir.y, dir.x)
+
+		var rayon_a = atome_a_objet.find_child("CollisionShape2D").shape.size.x / 2
+		var rayon_b = atome_b_objet.find_child("CollisionShape2D").shape.size.x / 2
+
 		var lignes = []
 		for d in decalages:
 			var ligne = Line2D.new()
-			ligne.add_point(atome_a_objet.global_position + d)
-			ligne.add_point(atome_b_objet.global_position + d)
+			ligne.add_point(atome_a_objet.global_position + dir * rayon_a + perp * d)
+			ligne.add_point(atome_b_objet.global_position - dir * rayon_b + perp * d)
 			ligne.width = 2
 			ligne.default_color = couleur
 			add_child(ligne)
 			lignes.append(ligne)
+
 		liaisons_visuelles.append([atome_a_objet, atome_b_objet, lignes])
 		atome_a_objet = null
 		atome_b_objet = null
-		#fin tracage de ligne
+			#fin tracage de ligne
 		selected_a = null
 		selected_b = null
 		$LiaisonB.hide()
@@ -165,10 +189,12 @@ func array_to_string(arr: Array) -> String:
 func _on_timer_timeout() -> void:
 	$LiaisonComplete.hide()
 
+var decouvertes = []
 
 func _on_creer_pressed() -> void:
 	print("vérifions...")
 	var s = array_to_string(temp_array)
+	print("liaison string: " + s)  # add this
 	var elements_ajoutees = []
 	for id in Inventaire.inventaire:
 		elements_ajoutees.append(Inventaire.inventaire[id]["symbole"])	#on collecte tout nos elements dans un array pour ensuite voir quel molecule a ces mêmes éléments.
@@ -179,13 +205,18 @@ func _on_creer_pressed() -> void:
 		
 		if elements_ajoutees == Molecule.formules_valides[formule]["elements"]:
 			var molecule_formee = Molecule.formules_valides[formule]
-			#for id in Inventaire.inventaire:
-				#var atome = Inventaire.inventaire[id]
-				#var symbole = atome["symbole"]
-				#var liaisons_requises = Molecule.formules_valides[formule]["liaisons"][symbole]
 			if s == molecule_formee["liaisons"]:
 				print("yurr!!!its " +  Molecule.formules_valides[formule]["nom"] + " baby!!!")
 				var molecule = Molecule.formules_valides[formule]
 				$CreationReussie.set_molecule(molecule)
+				Molecule.decouvertes.append(formule)
 		$EinsteinTesla.show()
 		$Explosion.show()
+
+
+func _on_reset_pressed() -> void:
+	get_tree().reload_current_scene()
+
+
+func _on_annexe_pressed() -> void:
+	get_tree().change_scene_to_file('res://inventaire_scene.tscn')

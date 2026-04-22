@@ -19,7 +19,7 @@ func _connecter(a: Element, b: Element) -> void:
 			a.liaisons_actualles += 3
 			b.liaisons_actualles += 3						
 var code_liaison: Dictionary = {
-	"CCSIMPLE": "CHs",
+	"CCSIMPLE": "CCs",
 	"CHSIMPLE": "CHs",
 	"CNSIMPLE": "CNs",
 	"COSIMPLE": "COs",

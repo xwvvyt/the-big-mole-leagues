@@ -262,22 +262,22 @@ sprite_frames = SubResource("SpriteFrames_j0x43")
 autoplay = "default"
 
 [node name="platform4" parent="." unique_id=635987519 instance=ExtResource("11_ptu66")]
-position = Vector2(570, 81)
+position = Vector2(658, 98)
 
 [node name="platform5" parent="." unique_id=624885499 instance=ExtResource("11_ptu66")]
-position = Vector2(693, 81)
+position = Vector2(781, 98)
 
 [node name="platform6" parent="." unique_id=2099746679 instance=ExtResource("11_ptu66")]
-position = Vector2(815, 81)
+position = Vector2(903, 98)
 
 [node name="platform7" parent="." unique_id=1511952340 instance=ExtResource("11_ptu66")]
-position = Vector2(570, 220)
+position = Vector2(658, 234)
 
 [node name="platform8" parent="." unique_id=2034698359 instance=ExtResource("11_ptu66")]
-position = Vector2(693, 220)
+position = Vector2(781, 234)
 
 [node name="platform9" parent="." unique_id=301537172 instance=ExtResource("11_ptu66")]
-position = Vector2(815, 220)
+position = Vector2(903, 234)
 
 [node name="object" parent="." unique_id=2103366820 instance=ExtResource("12_rcq3f")]
 visible = false
@@ -294,34 +294,50 @@ same_column_width = true
 script = ExtResource("13_rcq3f")
 
 [node name="platform10" parent="." unique_id=1149081024 instance=ExtResource("11_ptu66")]
-position = Vector2(571, 344)
+position = Vector2(659, 358)
 
 [node name="platform11" parent="." unique_id=234443190 instance=ExtResource("11_ptu66")]
-position = Vector2(694, 344)
+position = Vector2(782, 358)
 
 [node name="platform12" parent="." unique_id=1507149949 instance=ExtResource("11_ptu66")]
-position = Vector2(816, 344)
+position = Vector2(904, 358)
 
 [node name="platform14" parent="." unique_id=570319966 instance=ExtResource("11_ptu66")]
-position = Vector2(937, 81)
+position = Vector2(1025, 98)
 
 [node name="platform15" parent="." unique_id=854110396 instance=ExtResource("11_ptu66")]
-position = Vector2(937, 220)
+position = Vector2(1025, 234)
 
 [node name="platform16" parent="." unique_id=2086911740 instance=ExtResource("11_ptu66")]
-position = Vector2(938, 344)
+position = Vector2(1026, 358)
 
 [node name="platform17" parent="." unique_id=265280987 instance=ExtResource("11_ptu66")]
-position = Vector2(571, 466)
+position = Vector2(659, 483)
 
 [node name="platform18" parent="." unique_id=18266757 instance=ExtResource("11_ptu66")]
-position = Vector2(694, 466)
+position = Vector2(782, 483)
 
 [node name="platform19" parent="." unique_id=1222280913 instance=ExtResource("11_ptu66")]
-position = Vector2(816, 466)
+position = Vector2(904, 483)
 
 [node name="platform20" parent="." unique_id=1903936876 instance=ExtResource("11_ptu66")]
-position = Vector2(938, 466)
+position = Vector2(1026, 483)
+
+[node name="Reset" type="Button" parent="." unique_id=1223598253]
+offset_left = 602.0
+offset_top = 590.0
+offset_right = 699.0
+offset_bottom = 621.0
+theme_override_colors/font_color = Color(0.81667113, 0.113973744, 3.85046e-07, 1)
+text = "réinitialiser
+"
+
+[node name="Annexe" type="Button" parent="." unique_id=845100734]
+offset_left = 521.0
+offset_top = 589.0
+offset_right = 586.0
+offset_bottom = 620.0
+text = "annexe"
 
 [connection signal="pressed" from="addHydro" to="." method="_on_add_hydro_pressed"]
 [connection signal="pressed" from="addCarbone" to="." method="_on_add_carbone_pressed"]
@@ -334,3 +350,5 @@ position = Vector2(938, 466)
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="pressed" from="Creer" to="." method="_on_creer_pressed"]
 [connection signal="item_clicked" from="ItemList" to="." method="_on_item_list_item_clicked"]
+[connection signal="pressed" from="Reset" to="." method="_on_reset_pressed"]
+[connection signal="pressed" from="Annexe" to="." method="_on_annexe_pressed"]

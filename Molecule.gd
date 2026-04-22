@@ -1,9 +1,9 @@
 extends Node
  #ce dictionnaire stock les informations pour tout les molecules qui peuvent etre formees 
+var decouvertes = []
 
 var formules_valides: Dictionary = {
 	
-{
 	"FakeMolecule": {
 		"nom": "FakeMolecule",
 		"formule": "H2O",
@@ -202,14 +202,6 @@ var formules_valides: Dictionary = {
 		"geometrieVSEPR": ""
 	},
 
-	"C6H13NO2_isoleucine": {
-		"nom": "L-Isoleucine",
-		"formule": "C6H13NO2",
-		"elements": ["C", "C", "C", "C", "C", "C", "H", "H", "H", "H", "H", "H", "H", "H", "H", "H", "H", "H", "H", "N", "O", "O"],
-		"liaisons": "CCsCCsCCsCCsCCsCHsCHsCHsCHsCHsCHsCHsCHsCHsCHsCNsCOdCOsHNsHNsHOs",
-		"proprietes": "Masse molaire : 131.173 g/mol. Point de fusion : 284 °C (dec).",
-		"geometrieVSEPR": ""
-	},
 
 	"C5H9NO2": {
 		"nom": "L-Proline",
@@ -235,15 +227,6 @@ var formules_valides: Dictionary = {
 		"elements": ["C", "C", "C", "C", "C", "C", "H", "H", "H", "H", "H", "H", "H", "H", "O", "O", "O", "O", "O", "O", "O"],
 		"liaisons": "CCsCCsCCsCCsCCsCHsCHsCHsCHsCOdCOdCOdCOsCOsCOsCOsHOsHOsHOsHOs",
 		"proprietes": "Masse molaire : 192.124 g/mol. Point de fusion : 153 °C. Point d'ebullition : dec.",
-		"geometrieVSEPR": ""
-	},
-
-	"C6H8O7_iso": {
-		"nom": "Acide isocitrique",
-		"formule": "C6H8O7",
-		"elements": ["C", "C", "C", "C", "C", "C", "H", "H", "H", "H", "H", "H", "H", "H", "O", "O", "O", "O", "O", "O", "O"],
-		"liaisons": "CCsCCsCCsCCsCCsCHsCHsCHsCHsCOdCOdCOdCOsCOsCOsCOsHOsHOsHOsHOs",
-		"proprietes": "Masse molaire : 192.124 g/mol. Point de fusion : 105 °C.",
 		"geometrieVSEPR": ""
 	},
 
@@ -292,16 +275,7 @@ var formules_valides: Dictionary = {
 		"geometrieVSEPR": ""
 	},
 
-	"C6H12O6_galactose": {
-		"nom": "D-Galactose",
-		"formule": "C6H12O6",
-		"elements": ["C", "C", "C", "C", "C", "C", "H", "H", "H", "H", "H", "H", "H", "H", "H", "H", "H", "H", "O", "O", "O", "O", "O", "O"],
-		"liaisons": "CCsCCsCCsCCsCCsCHsCHsCHsCHsCHsCHsCHsCOdCOsCOsCOsCOsCOsHOsHOsHOsHOsHOs",
-		"proprietes": "Masse molaire : 180.155 g/mol. Point de fusion : 170 °C.",
-		"geometrieVSEPR": ""
-	},
-
-	"C6H12O6_mannose": {
+	"C6H12O6": {
 		"nom": "D-Mannose",
 		"formule": "C6H12O6",
 		"elements": ["C", "C", "C", "C", "C", "C", "H", "H", "H", "H", "H", "H", "H", "H", "H", "H", "H", "H", "O", "O", "O", "O", "O", "O"],

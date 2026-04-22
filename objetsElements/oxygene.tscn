@@ -4,30 +4,28 @@
 [ext_resource type="Texture2D" uid="uid://dls4cxwphfv3o" path="res://icon80.png" id="2_7d38o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3xuqs"]
-size = Vector2(94.90508, 96.15386)
+size = Vector2(99.90009, 99.9001)
 
 [node name="object" type="Node2D" unique_id=2103366820]
 position = Vector2(-24, -24)
 script = ExtResource("1_jnpdq")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1513984063]
-position = Vector2(64, 64)
 texture = ExtResource("2_7d38o")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1899214617]
-offset_left = 26.0
-offset_top = 26.0
-offset_right = 51.0
-offset_bottom = 50.0
+offset_left = -40.0
+offset_top = -40.0
+offset_right = -15.0
+offset_bottom = -16.0
 color = Color(1, 0, 0, 1)
 metadata/_edit_use_anchors_ = true
 
 [node name="Area2D" type="Area2D" parent="." unique_id=358597474]
-position = Vector2(8, 8)
 scale = Vector2(0.88, 0.88)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1530924229]
-position = Vector2(63.636364, 64.204544)
+position = Vector2(7.6293945e-06, 5.722046e-06)
 scale = Vector2(0.91, 0.91)
 shape = SubResource("RectangleShape2D_3xuqs")
 

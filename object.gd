@@ -21,7 +21,7 @@ func _process(delta):
 			global.is_dragging = false
 			var tween = get_tree().create_tween()
 			if is_inside_dropable:
-				tween.tween_property(self,"position",body_ref.position,0.2).set_ease(Tween.EASE_OUT)
+				tween.tween_property(self, "global_position", body_ref.global_position, 0.2).set_ease(Tween.EASE_OUT)
 			else:
 				tween.tween_property(self,"global_position",initialPos,0.2).set_ease(Tween.EASE_OUT)
 
@@ -35,10 +35,10 @@ func _on_area_2d_mouse_exited():
 		draggable = false
 		scale = Vector2(1, 1)
 
-func _on_area_2d_body_entered(body:StaticBody2D):
+func _on_area_2d_body_entered(body: StaticBody2D):
 	if body.is_in_group('dropable'):
 		is_inside_dropable = true
-		body.modulate = Color(Color.REBECCA_PURPLE,1)
+		body.modulate = Color(Color.REBECCA_PURPLE, 1)
 		body_ref = body
 
 func _on_area_2d_body_exited(body):

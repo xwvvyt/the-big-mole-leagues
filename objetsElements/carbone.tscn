@@ -10,20 +10,19 @@ size = Vector2(99.9001, 99.9001)
 script = ExtResource("1_unwtn")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1513984063]
-position = Vector2(40, 40)
 texture = ExtResource("2_unwtn")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1158574661]
-offset_right = 23.0
-offset_bottom = 22.0
+offset_left = -40.0
+offset_top = -40.0
+offset_right = -17.0
+offset_bottom = -18.0
 color = Color(0, 0, 0, 1)
 
 [node name="Area2D" type="Area2D" parent="." unique_id=358597474]
-position = Vector2(8, 8)
 scale = Vector2(0.88, 0.88)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1530924229]
-position = Vector2(36.363632, 37.499985)
 scale = Vector2(0.91, 0.91)
 shape = SubResource("RectangleShape2D_3xuqs")
 
