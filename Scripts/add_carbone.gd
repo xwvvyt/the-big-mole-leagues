@@ -1,5 +1,4 @@
-class_name TypeLiaison
-extends Node
+extends Button
 
 
 # Called when the node enters the scene tree for the first time.
@@ -11,10 +10,6 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-enum liaisons {SIMPLE, DOUBLE, TRIPLE, COIN, TIRET}
 
-func _init():
-	print("Hello, world!")
-	print("Hit the SLAY button!")
-	print(liaisons.keys())
-	print(liaisons.values())
+func _on_pressed() -> void:
+	Inventaire.update_item("C", 1)

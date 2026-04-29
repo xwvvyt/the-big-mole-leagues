@@ -110,6 +110,7 @@ animations = [{
 script = ExtResource("1_ptu66")
 
 [node name="addHydro" type="Button" parent="." unique_id=350026936]
+visible = false
 offset_left = 19.0
 offset_top = 15.0
 offset_right = 144.0
@@ -117,6 +118,7 @@ offset_bottom = 89.0
 text = "add hydrogene"
 
 [node name="addCarbone" type="Button" parent="." unique_id=1467257692]
+visible = false
 offset_left = 167.0
 offset_top = 16.0
 offset_right = 292.0
@@ -124,6 +126,7 @@ offset_bottom = 90.0
 text = "add carbone"
 
 [node name="addAzote" type="Button" parent="." unique_id=1992623902]
+visible = false
 offset_left = 20.0
 offset_top = 103.0
 offset_right = 145.0
@@ -131,6 +134,7 @@ offset_bottom = 177.0
 text = "add azote"
 
 [node name="addOxygene" type="Button" parent="." unique_id=144913807]
+visible = false
 offset_left = 169.0
 offset_top = 104.0
 offset_right = 294.0
@@ -138,6 +142,7 @@ offset_bottom = 178.0
 text = "add oxypoxy"
 
 [node name="addSoufre" type="Button" parent="." unique_id=877351395]
+visible = false
 offset_left = 105.0
 offset_top = 189.0
 offset_right = 230.0
@@ -339,6 +344,20 @@ offset_right = 586.0
 offset_bottom = 620.0
 text = "annexe"
 
+[node name="CreerEau" type="Button" parent="." unique_id=197123605]
+offset_left = 104.0
+offset_top = 128.0
+offset_right = 223.0
+offset_bottom = 169.0
+text = "test eau"
+
+[node name="CreerAutre" type="Button" parent="." unique_id=847920981]
+offset_left = 104.0
+offset_top = 192.0
+offset_right = 223.0
+offset_bottom = 233.0
+text = "test Guanine"
+
 [connection signal="pressed" from="addHydro" to="." method="_on_add_hydro_pressed"]
 [connection signal="pressed" from="addCarbone" to="." method="_on_add_carbone_pressed"]
 [connection signal="pressed" from="addAzote" to="." method="_on_add_azote_pressed"]
@@ -352,3 +371,5 @@ text = "annexe"
 [connection signal="item_clicked" from="ItemList" to="." method="_on_item_list_item_clicked"]
 [connection signal="pressed" from="Reset" to="." method="_on_reset_pressed"]
 [connection signal="pressed" from="Annexe" to="." method="_on_annexe_pressed"]
+[connection signal="pressed" from="CreerEau" to="." method="_on_creer_eau_pressed"]
+[connection signal="pressed" from="CreerAutre" to="." method="_on_creer_autre_pressed"]

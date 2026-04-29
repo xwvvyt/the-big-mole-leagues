@@ -20,7 +20,7 @@ func _on_any_button_pressed(button_name: String):
 	var molecule = null
 	if Molecule.formules_valides.has(str(button_name)):
 		molecule = Molecule.formules_valides[str(button_name)]
-		$Info.text = "Nom:" + molecule["nom"] + "\nFormule: " + molecule["formule"] + "\nProprietes: " + molecule["proprietes"]
+		$Info.text = "Nom: " + molecule["nom"] + "\nFormule: " + molecule["formule"] + "\nProprietes: " + molecule["proprietes"]
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass

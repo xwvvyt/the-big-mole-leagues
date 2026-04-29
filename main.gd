@@ -194,7 +194,7 @@ var decouvertes = []
 func _on_creer_pressed() -> void:
 	print("vérifions...")
 	var s = array_to_string(temp_array)
-	print("liaison string: " + s)  # add this
+	print("liaison string: " + s)
 	var elements_ajoutees = []
 	for id in Inventaire.inventaire:
 		elements_ajoutees.append(Inventaire.inventaire[id]["symbole"])	#on collecte tout nos elements dans un array pour ensuite voir quel molecule a ces mêmes éléments.
@@ -220,3 +220,20 @@ func _on_reset_pressed() -> void:
 
 func _on_annexe_pressed() -> void:
 	get_tree().change_scene_to_file('res://inventaire_scene.tscn')
+
+
+
+
+
+func _on_creer_eau_pressed() -> void:
+	$CreationReussie.set_molecule(Molecule.formules_valides["H2O"])
+	Molecule.decouvertes.append("H2O")
+	$EinsteinTesla.show()
+	$Explosion.show()
+
+
+func _on_creer_autre_pressed() -> void:
+	$CreationReussie.set_molecule(Molecule.formules_valides["C5H5N5O"])
+	Molecule.decouvertes.append("C5H5N5O")
+	$EinsteinTesla.show()
+	$Explosion.show()
