@@ -5,8 +5,8 @@ var is_inside_dropable = false
 var body_ref
 var offset: Vector2
 var initialPos : Vector2
-var mynode= preload("res://User Int/atomeDNDtest.tscn")
 var isDropped = false
+
 
 
 
@@ -21,31 +21,29 @@ func _process(delta):
 		elif Input.is_action_just_released("click"):
 			Dragging.is_dragging = false
 			var tween = get_tree().create_tween()
-			if is_inside_dropable:
-				tween.tween_property(self,"position",body_ref.position,0.2).set_ease(Tween.EASE_OUT)
-				print("Dropped in ct")
+			if is_inside_dropable: #Atome reste dans la zone de crafting
+				#tween.tween_property(self,"position",body_ref.position,0.2).set_ease(Tween.EASE_OUT)
 				isDropped = true
-			else:
+			else: #Atome repart dans sa position initiale
 				tween.tween_property(self,"global_position",initialPos,0.2).set_ease(Tween.EASE_OUT)
-	if isDropped:
-		isDropped = false
-		inst(initialPos)
 
-##Hovering
+
+
+#Hovering
 func _on_area_2d_mouse_entered():
-	if not Dragging.is_dragging:
+	if not Dragging.is_dragging && is_inside_dropable == false:
 		draggable = true
 		scale = Vector2(1.05, 1.05) 
 
 
-##Dropping
+#Dropping
 func _on_area_2d_mouse_exited():
 	if not Dragging.is_dragging:
 		draggable = false
 		scale = Vector2(1, 1)
 
 
-##Entering dropable area
+#Entering dropable area
 func _on_area_2d_body_entered(body:StaticBody2D):
 	if body.is_in_group('dropable'):
 		is_inside_dropable = true
@@ -53,16 +51,9 @@ func _on_area_2d_body_entered(body:StaticBody2D):
 		body_ref = body
 
 
-##Exiting dropable area
+#Exiting dropable area
 func _on_area_2d_body_exited(body):
 	if body.is_in_group('dropable'):
 		is_inside_dropable = false
 		body.modulate = Color(Color.MEDIUM_PURPLE,0.7)
 		
-
-
-##Instantiate function
-func inst(pos):
-	var instance = mynode.instantiate()
-	instance.position = pos 
-	add_child(instance)

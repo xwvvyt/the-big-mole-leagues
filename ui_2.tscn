@@ -2,24 +2,21 @@
 
 [ext_resource type="PackedScene" uid="uid://bjmkba5848uql" path="res://User Int/crafting_table.tscn" id="1_3q325"]
 [ext_resource type="Script" uid="uid://yrjhegycr5q3" path="res://ui_2.gd" id="1_juu86"]
-[ext_resource type="PackedScene" uid="uid://bu6ydbo2k46n2" path="res://User Int/atomeDNDtest.tscn" id="2_juu86"]
+[ext_resource type="Texture2D" uid="uid://dm0bp7ays6erl" path="res://User Int/kkillerQueen.webp" id="3_juu86"]
 
 [node name="UI" type="Node2D" unique_id=1251580938]
 script = ExtResource("1_juu86")
 
 [node name="crafting table" parent="." unique_id=1312228177 instance=ExtResource("1_3q325")]
 
-[node name="atomePNG" parent="." unique_id=606138387 instance=ExtResource("2_juu86")]
-position = Vector2(1022, 22)
+[node name="Button" type="Button" parent="." unique_id=831551692]
+offset_top = 431.0
+offset_right = 113.0
+offset_bottom = 496.0
 
-[node name="atomePNG2" parent="." unique_id=924733434 instance=ExtResource("2_juu86")]
-visible = false
-position = Vector2(1020, 153)
+[node name="Sprite2D" type="Sprite2D" parent="Button" unique_id=1752102233]
+position = Vector2(56.75, 32.5)
+scale = Vector2(0.35079366, 0.35)
+texture = ExtResource("3_juu86")
 
-[node name="atomePNG3" parent="." unique_id=1127358412 instance=ExtResource("2_juu86")]
-visible = false
-position = Vector2(1019, 284)
-
-[node name="atomePNG4" parent="." unique_id=1579398813 instance=ExtResource("2_juu86")]
-visible = false
-position = Vector2(1023, 418)
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

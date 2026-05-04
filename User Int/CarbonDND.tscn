@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://bqqnhndnp4vi8"]
+
+[ext_resource type="Script" uid="uid://can0mmqujuyok" path="res://User Int/atome_png.gd" id="1_hvrks"]
+[ext_resource type="Texture2D" uid="uid://iei7gai4d6rx" path="res://User Int/Carbon.png" id="2_hvrks"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4btnb"]
+size = Vector2(100, 100)
+
+[node name="CarbonPNG" type="Node2D" unique_id=1179359770]
+script = ExtResource("1_hvrks")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=576778467]
+position = Vector2(49.999996, 50.000004)
+scale = Vector2(0.26953122, 0.26953125)
+texture = ExtResource("2_hvrks")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=2145904426]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=210719716]
+position = Vector2(50, 50)
+shape = SubResource("RectangleShape2D_4btnb")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]
