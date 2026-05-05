@@ -49,6 +49,10 @@ func _process(delta):
 		for node in get_tree().get_nodes_in_group("droppedElements"):
 			node.queue_free()
 		reset = false
+		nbCarbon = 0
+		nbHydrogen = 0
+		nbNitrogen = 0
+		nbOxygen = 0
 	
 	
 
