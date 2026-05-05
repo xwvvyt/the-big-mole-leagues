@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bxdd2kfivo6rc"]
+
+[ext_resource type="Script" uid="uid://bk13kaa8ukxpi" path="res://3D/mon_jeu_prototype.gd" id="1_7cqry"]
+[ext_resource type="PackedScene" uid="uid://btl82qf4ecu3e" path="res://3D/Atome.tscn" id="2_qafuv"]
+[ext_resource type="PackedScene" uid="uid://dcs2tl8ydoxa7" path="res://3D/liaison.tscn" id="3_gpyit"]
+[ext_resource type="Script" uid="uid://bicx2praa0747" path="res://3D/camera_3d.gd" id="4_gpyit"]
+
+[node name="MonJeu" type="Node3D" unique_id=1466058787]
+script = ExtResource("1_7cqry")
+atome_scene = ExtResource("2_qafuv")
+liaison_scene = ExtResource("3_gpyit")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=2080245466]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+script = ExtResource("4_gpyit")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Camera3D" unique_id=619376635]

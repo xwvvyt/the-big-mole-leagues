@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://btm7lao80j5pd"]
+
+[ext_resource type="PackedScene" uid="uid://dre74xu30sskv" path="res://Scenes/TypeLiaison.tscn" id="1_3b070"]
+[ext_resource type="Script" uid="uid://bu2hnptkcybjd" path="res://Jeu.gd" id="1_epcqq"]
+[ext_resource type="PackedScene" uid="uid://rtvbjig18gg5" path="res://Element.tscn" id="2_vac35"]
+[ext_resource type="PackedScene" uid="uid://b4sh7bjhqpjy3" path="res://Scenes/Liaison.tscn" id="4_ngu60"]
+
+[node name="Jeu" type="Node2D" unique_id=868007546]
+script = ExtResource("1_epcqq")
+
+[node name="TypeLiaison" parent="." unique_id=1188645555 instance=ExtResource("1_3b070")]
+
+[node name="Element" parent="." unique_id=1298425169 instance=ExtResource("2_vac35")]
+
+[node name="Liaison" parent="." unique_id=1501233062 instance=ExtResource("4_ngu60")]

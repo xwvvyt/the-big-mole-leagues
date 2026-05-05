@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bv3je0r0v8nuv"]
+
+[ext_resource type="Script" uid="uid://bxyywlf8ss7bs" path="res://3D/zone_construction.gd" id="1_w5l3n"]
+
+[node name="ZoneConstruction" type="Node3D" unique_id=1220883319]
+script = ExtResource("1_w5l3n")

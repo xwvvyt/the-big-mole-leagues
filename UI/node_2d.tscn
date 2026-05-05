@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dpvpg335avm7n"]
+
+[ext_resource type="PackedScene" uid="uid://dre74xu30sskv" path="res://Scenes/TypeLiaison.tscn" id="1_wtcfe"]
+[ext_resource type="PackedScene" uid="uid://rtvbjig18gg5" path="res://Element.tscn" id="2_0e48y"]
+
+[node name="Jeu" type="Node2D" unique_id=868007546]
+
+[node name="TypeLiaison" parent="." unique_id=1188645555 instance=ExtResource("1_wtcfe")]
+
+[node name="Element" parent="." unique_id=1298425169 instance=ExtResource("2_0e48y")]

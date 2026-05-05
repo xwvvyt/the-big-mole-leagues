@@ -1,0 +1,284 @@
+[gd_scene format=3 uid="uid://cs0gp4fna5xxp"]
+
+[ext_resource type="Script" uid="uid://bq8quejyckq3s" path="res://Scripts/ajouter.gd" id="1_xkxdb"]
+[ext_resource type="Texture2D" uid="uid://d30i0aeq3ndk1" path="res://krebs.png" id="2_k1igl"]
+[ext_resource type="Script" uid="uid://ck7f40u7d8r64" path="res://Scripts/inventaire.gd" id="3_1vo6w"]
+[ext_resource type="Texture2D" uid="uid://cpay2otrb7jml" path="res://rutherford.png" id="3_lnvv4"]
+[ext_resource type="Script" uid="uid://cwyej08cs6er" path="res://Scripts/rich_text_label.gd" id="4_2mxb7"]
+[ext_resource type="Texture2D" uid="uid://dc7hmtg88pngs" path="res://Dmitri_Mendeleev.jpg" id="4_aga2u"]
+[ext_resource type="Script" uid="uid://dq03qsotcx5kl" path="res://Scenes/debug_ajouter.gd" id="4_xkxdb"]
+[ext_resource type="Script" uid="uid://drjmy45m58l25" path="res://Scenes/item_list.gd" id="6_1vo6w"]
+[ext_resource type="Script" uid="uid://xrohbxyxhtss" path="res://Scenes/timer.gd" id="8_qpprl"]
+[ext_resource type="Texture2D" uid="uid://drgg5df1w56io" path="res://einsteintesla.png" id="9_umhsy"]
+[ext_resource type="Texture2D" uid="uid://dn0cuqu2plhc4" path="res://explosion-1-d/spritsheet.png" id="10_lnvv4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aga2u"]
+atlas = ExtResource("10_lnvv4")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ap3cc"]
+atlas = ExtResource("10_lnvv4")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k6pmf"]
+atlas = ExtResource("10_lnvv4")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kfj7v"]
+atlas = ExtResource("10_lnvv4")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_77d2v"]
+atlas = ExtResource("10_lnvv4")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u440b"]
+atlas = ExtResource("10_lnvv4")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r07ek"]
+atlas = ExtResource("10_lnvv4")
+region = Rect2(768, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pflxx"]
+atlas = ExtResource("10_lnvv4")
+region = Rect2(896, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xh3w5"]
+atlas = ExtResource("10_lnvv4")
+region = Rect2(1024, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8d0b1"]
+atlas = ExtResource("10_lnvv4")
+region = Rect2(1152, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jos0d"]
+atlas = ExtResource("10_lnvv4")
+region = Rect2(1280, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_80cdl"]
+atlas = ExtResource("10_lnvv4")
+region = Rect2(1408, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ojtfx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aga2u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ap3cc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k6pmf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kfj7v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_77d2v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u440b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r07ek")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pflxx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xh3w5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8d0b1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jos0d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_80cdl")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D" unique_id=1963812452]
+script = ExtResource("1_xkxdb")
+
+[node name="addHydro" type="Button" parent="." unique_id=1976840342]
+offset_left = 19.0
+offset_top = 15.0
+offset_right = 144.0
+offset_bottom = 89.0
+text = "add hydrogene"
+
+[node name="addCarbone" type="Button" parent="." unique_id=263148015]
+offset_left = 167.0
+offset_top = 16.0
+offset_right = 292.0
+offset_bottom = 90.0
+text = "add carbone"
+
+[node name="addAzote" type="Button" parent="." unique_id=1004945601]
+offset_left = 20.0
+offset_top = 103.0
+offset_right = 145.0
+offset_bottom = 177.0
+text = "add azote"
+
+[node name="addOxygene" type="Button" parent="." unique_id=1463293169]
+offset_left = 169.0
+offset_top = 104.0
+offset_right = 294.0
+offset_bottom = 178.0
+text = "add oxypoxy"
+
+[node name="addSoufre" type="Button" parent="." unique_id=1698559081]
+offset_left = 105.0
+offset_top = 189.0
+offset_right = 230.0
+offset_bottom = 263.0
+text = "add suffering"
+
+[node name="addSimple" type="Button" parent="." unique_id=1156021087]
+offset_left = 25.0
+offset_top = 293.0
+offset_right = 503.0
+offset_bottom = 401.0
+theme_override_colors/font_color = Color(0.86317277, 0.8589718, 1, 1)
+theme_override_font_sizes/font_size = 20
+text = "add une splendide liaison simple"
+icon = ExtResource("2_k1igl")
+expand_icon = true
+
+[node name="addDouble" type="Button" parent="." unique_id=1434551473]
+offset_left = 25.0
+offset_top = 409.0
+offset_right = 503.0
+offset_bottom = 517.0
+theme_override_colors/font_color = Color(0.86317277, 0.8589718, 1, 1)
+theme_override_font_sizes/font_size = 20
+text = "add une audacieuse liaison double"
+icon = ExtResource("3_lnvv4")
+expand_icon = true
+
+[node name="addTriple" type="Button" parent="." unique_id=23643929]
+offset_left = 25.0
+offset_top = 524.0
+offset_right = 503.0
+offset_bottom = 632.0
+theme_override_colors/font_color = Color(0.86317277, 0.8589718, 1, 1)
+theme_override_font_sizes/font_size = 20
+text = "add une avare liaison triple"
+icon = ExtResource("4_aga2u")
+expand_icon = true
+
+[node name="Inventaire" type="Node2D" parent="." unique_id=277775275]
+script = ExtResource("3_1vo6w")
+
+[node name="CreationReussie" type="RichTextLabel" parent="." unique_id=762343083]
+offset_left = 504.0
+offset_top = 127.0
+offset_right = 778.0
+offset_bottom = 191.0
+script = ExtResource("4_2mxb7")
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="." unique_id=1123897804]
+offset_left = 828.0
+offset_top = 59.0
+offset_right = 981.0
+offset_bottom = 186.0
+script = ExtResource("4_xkxdb")
+
+[node name="ItemList" type="ItemList" parent="." unique_id=1062098197]
+offset_left = 658.0
+offset_top = 238.0
+offset_right = 1105.0
+offset_bottom = 572.0
+max_columns = 3
+same_column_width = true
+script = ExtResource("6_1vo6w")
+
+[node name="LiaisonA" type="Label" parent="." unique_id=458001051]
+visible = false
+anchors_preset = -1
+anchor_left = -2.0500002
+anchor_top = 1.093
+anchor_right = -2.0500002
+anchor_bottom = 1.093
+offset_left = 162.0
+offset_top = 589.0
+offset_right = 639.0
+offset_bottom = 612.0
+text = "on commence à lier! choisis ton premier élément à connecter."
+
+[node name="LiaisonB" type="Label" parent="." unique_id=219758266]
+visible = false
+anchors_preset = -1
+anchor_left = -2.0500002
+anchor_top = 1.093
+anchor_right = -2.0500002
+anchor_bottom = 1.093
+offset_left = 162.0
+offset_top = 589.0
+offset_right = 639.0
+offset_bottom = 612.0
+text = "maintenant mon ami on choisi b !"
+
+[node name="LiaisonComplete" type="Label" parent="." unique_id=2018042113]
+visible = false
+anchors_preset = -1
+anchor_left = -2.0500002
+anchor_top = 1.093
+anchor_right = -2.0500002
+anchor_bottom = 1.093
+offset_left = 314.0
+offset_top = 240.0
+offset_right = 791.0
+offset_bottom = 263.0
+text = "tu es révolutionnaire."
+
+[node name="Timer" type="Timer" parent="." unique_id=1126434306]
+wait_time = 3.0
+script = ExtResource("8_qpprl")
+
+[node name="Creer" type="Button" parent="." unique_id=1741585497]
+offset_left = 716.0
+offset_top = 586.0
+offset_right = 832.0
+offset_bottom = 625.0
+theme_override_colors/font_color = Color(0.55979156, 0.99999994, 0.46161014, 1)
+theme_override_colors/font_hover_color = Color(0.14996687, 0.64904314, 0.7953372, 1)
+text = "donner le cadeau de la vie à une molécule"
+
+[node name="EinsteinTesla" type="TextureRect" parent="." unique_id=780287451]
+offset_left = 311.0
+offset_top = 77.0
+offset_right = 494.0
+offset_bottom = 269.0
+texture = ExtResource("9_umhsy")
+expand_mode = 1
+
+[node name="Explosion" type="AnimatedSprite2D" parent="." unique_id=338983131]
+position = Vector2(401.99997, 173.50003)
+scale = Vector2(1.4374998, 1.5703124)
+sprite_frames = SubResource("SpriteFrames_ojtfx")
+autoplay = "default"
+
+[connection signal="pressed" from="addHydro" to="." method="_on_add_hydro_pressed"]
+[connection signal="pressed" from="addHydro" to="addHydro" method="_on_pressed"]
+[connection signal="pressed" from="addCarbone" to="." method="_on_add_carbone_pressed"]
+[connection signal="pressed" from="addCarbone" to="addCarbone" method="_on_pressed"]
+[connection signal="pressed" from="addAzote" to="." method="_on_add_azote_pressed"]
+[connection signal="pressed" from="addAzote" to="addAzote" method="_on_pressed"]
+[connection signal="pressed" from="addOxygene" to="." method="_on_add_oxygene_pressed"]
+[connection signal="pressed" from="addOxygene" to="addOxygene" method="_on_pressed"]
+[connection signal="pressed" from="addSoufre" to="." method="_on_add_soufre_pressed"]
+[connection signal="pressed" from="addSimple" to="." method="_on_add_simple_pressed"]
+[connection signal="pressed" from="addDouble" to="." method="_on_add_double_pressed"]
+[connection signal="pressed" from="addTriple" to="." method="_on_add_triple_pressed"]
+[connection signal="item_clicked" from="ItemList" to="." method="_on_item_list_item_clicked"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="Creer" to="." method="_on_creer_pressed"]
