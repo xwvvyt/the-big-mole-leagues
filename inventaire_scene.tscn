@@ -1,13 +1,26 @@
 [gd_scene format=3 uid="uid://cw3ay1q1tlnse"]
 
 [ext_resource type="Script" uid="uid://cqpmsiera1bol" path="res://inventaire_scene.gd" id="1_6w4t3"]
+[ext_resource type="PackedScene" uid="uid://bxdd2kfivo6rc" path="res://3D/mon_jeu.tscn" id="2_melow"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_melow"]
+bg_color = Color(0.98039216, 0.95686275, 0.99215686, 1)
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_dxqf4"]
+color = Color(0.3254902, 0.16862746, 0.53333336, 1)
 
 [node name="InventaireScene" type="Node2D" unique_id=1072228576]
 script = ExtResource("1_6w4t3")
 
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1648958166]
+offset_right = 1152.0
+offset_bottom = 648.0
+mouse_filter = 2
+
 [node name="Info" type="RichTextLabel" parent="." unique_id=1246730877]
 offset_right = 503.0
 offset_bottom = 455.0
+theme_override_colors/default_color = Color(0.3254902, 0.16862746, 0.53333336, 1)
 text = "Nom:
 Formule:
 Proprietes:
@@ -24,158 +37,240 @@ columns = 2
 [node name="H2O" type="Button" parent="GridContainer" unique_id=1059235914 groups=["buttons"]]
 layout_mode = 2
 size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0.3254902, 0.16862746, 0.53333336, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_melow")
 text = "Eau"
 
 [node name="C5H5N5" type="Button" parent="GridContainer" unique_id=2130979652 groups=["buttons"]]
 layout_mode = 2
 size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0.3254902, 0.16862746, 0.53333336, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_melow")
 text = "Adenine"
 
 [node name="C5H6N2O2" type="Button" parent="GridContainer" unique_id=791470522 groups=["buttons"]]
 layout_mode = 2
 size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0.3254902, 0.16862746, 0.53333336, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_melow")
 text = "Thymine"
 
 [node name="C5H5N5O" type="Button" parent="GridContainer" unique_id=864367344 groups=["buttons"]]
 layout_mode = 2
 size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0.3254902, 0.16862746, 0.53333336, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_melow")
 text = "Guanine"
 
 [node name="C4H5N3O" type="Button" parent="GridContainer" unique_id=1307336160 groups=["buttons"]]
 layout_mode = 2
 size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0.3254902, 0.16862746, 0.53333336, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_melow")
 text = "Cytosine"
 
 [node name="C5H10N2O3" type="Button" parent="GridContainer" unique_id=1561757125 groups=["buttons"]]
 layout_mode = 2
 size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0.3254902, 0.16862746, 0.53333336, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_melow")
 text = "Glutamine"
 
 [node name="C3H7NO2" type="Button" parent="GridContainer" unique_id=1853466623 groups=["buttons"]]
 layout_mode = 2
 size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0.3254902, 0.16862746, 0.53333336, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_melow")
 text = "Cytosine"
 
 [node name="C3H4O3" type="Button" parent="GridContainer" unique_id=773835717 groups=["buttons"]]
 layout_mode = 2
 size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0.3254902, 0.16862746, 0.53333336, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_melow")
 text = "Acide pyruvique"
 
 [node name="C6H13NO2" type="Button" parent="GridContainer" unique_id=719316691 groups=["buttons"]]
 layout_mode = 2
 size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0.3254902, 0.16862746, 0.53333336, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_melow")
 text = "Leucine"
 
 [node name="C3H7NO3" type="Button" parent="GridContainer" unique_id=1332193604 groups=["buttons"]]
 layout_mode = 2
 size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0.3254902, 0.16862746, 0.53333336, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_melow")
 text = "Serine"
 
 [node name="C6H14N4O2" type="Button" parent="GridContainer" unique_id=305838052 groups=["buttons"]]
 layout_mode = 2
 size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0.3254902, 0.16862746, 0.53333336, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_melow")
 text = "Arginine"
 
 [node name="C6H14N2O2" type="Button" parent="GridContainer" unique_id=1711817015 groups=["buttons"]]
 layout_mode = 2
 size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0.3254902, 0.16862746, 0.53333336, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_melow")
 text = "Lysine"
 
 [node name="C4H9NO3" type="Button" parent="GridContainer" unique_id=583226201 groups=["buttons"]]
 layout_mode = 2
 size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0.3254902, 0.16862746, 0.53333336, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_melow")
 text = "Threonine"
 
 [node name="C4H8N2O3" type="Button" parent="GridContainer" unique_id=1362750777 groups=["buttons"]]
 layout_mode = 2
 size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0.3254902, 0.16862746, 0.53333336, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_melow")
 text = "Asparagine"
 
 [node name="C2H5NO2" type="Button" parent="GridContainer" unique_id=1716559457 groups=["buttons"]]
 layout_mode = 2
 size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0.3254902, 0.16862746, 0.53333336, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_melow")
 text = "Glycine"
 
 [node name="C5H11NO2S" type="Button" parent="GridContainer" unique_id=1226230385 groups=["buttons"]]
 layout_mode = 2
 size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0.3254902, 0.16862746, 0.53333336, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_melow")
 text = "Methionine"
 
 [node name="C11H12N2O2" type="Button" parent="GridContainer" unique_id=1883687086 groups=["buttons"]]
 layout_mode = 2
 size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0.3254902, 0.16862746, 0.53333336, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_melow")
 text = "Tryptophane"
 
 [node name="C6H9N3O2" type="Button" parent="GridContainer" unique_id=34674581 groups=["buttons"]]
 layout_mode = 2
 size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0.3254902, 0.16862746, 0.53333336, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_melow")
 text = "Histidine"
 
 [node name="C9H11NO2" type="Button" parent="GridContainer" unique_id=1841033637 groups=["buttons"]]
 layout_mode = 2
 size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0.3254902, 0.16862746, 0.53333336, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_melow")
 text = "Phenylalanine"
 
 [node name="C9H11NO3" type="Button" parent="GridContainer" unique_id=30691341 groups=["buttons"]]
 layout_mode = 2
 size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0.3254902, 0.16862746, 0.53333336, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_melow")
 text = "Tyrosine"
 
 [node name="C3H7NO2S" type="Button" parent="GridContainer" unique_id=1709427708 groups=["buttons"]]
 layout_mode = 2
 size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0.3254902, 0.16862746, 0.53333336, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_melow")
 text = "Cysteine"
 
 [node name="C5H9NO2" type="Button" parent="GridContainer" unique_id=2017534086 groups=["buttons"]]
 layout_mode = 2
 size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0.3254902, 0.16862746, 0.53333336, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_melow")
 text = "Proline"
 
 [node name="C5H11NO2" type="Button" parent="GridContainer" unique_id=1880311602 groups=["buttons"]]
 layout_mode = 2
 size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0.3254902, 0.16862746, 0.53333336, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_melow")
 text = "Valine"
 
 [node name="C6H8O7" type="Button" parent="GridContainer" unique_id=1531698638 groups=["buttons"]]
 layout_mode = 2
 size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0.3254902, 0.16862746, 0.53333336, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_melow")
 text = "Acide citrique"
 
 [node name="C4H6O4" type="Button" parent="GridContainer" unique_id=1945863348 groups=["buttons"]]
 layout_mode = 2
 size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0.3254902, 0.16862746, 0.53333336, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_melow")
 text = "Acide succinique"
 
 [node name="C4H4O4" type="Button" parent="GridContainer" unique_id=834046159 groups=["buttons"]]
 layout_mode = 2
 size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0.3254902, 0.16862746, 0.53333336, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_melow")
 text = "Acide fumarique"
 
 [node name="C4H6O5" type="Button" parent="GridContainer" unique_id=1900479293 groups=["buttons"]]
 layout_mode = 2
 size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0.3254902, 0.16862746, 0.53333336, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_melow")
 text = "Acide malique"
 
 [node name="C4H4O5" type="Button" parent="GridContainer" unique_id=305705227 groups=["buttons"]]
 layout_mode = 2
 size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0.3254902, 0.16862746, 0.53333336, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_melow")
 text = "Acide oxaloacetique"
 
 [node name="C5H10O5" type="Button" parent="GridContainer" unique_id=86739891 groups=["buttons"]]
 layout_mode = 2
 size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0.3254902, 0.16862746, 0.53333336, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_melow")
 text = "Ribose"
 
 [node name="C6H12O6" type="Button" parent="GridContainer" unique_id=2017789825 groups=["buttons"]]
 layout_mode = 2
 size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0.3254902, 0.16862746, 0.53333336, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_melow")
 text = "Mannose"
 
 [node name="Revenir" type="Button" parent="." unique_id=258219915]
-offset_left = 212.0
-offset_top = 534.0
-offset_right = 440.0
-offset_bottom = 565.0
+offset_left = 224.0
+offset_top = 528.0
+offset_right = 452.0
+offset_bottom = 559.0
+theme_override_colors/font_color = Color(0.3254902, 0.16862746, 0.53333336, 1)
+theme_override_styles/normal = SubResource("StyleBoxLine_dxqf4")
 text = "revenir au menu de création"
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=1858877267]
+offset_left = 160.0
+offset_top = 144.0
+offset_right = 528.0
+offset_bottom = 512.0
+color = Color(0.98039216, 0.9607843, 0.99215686, 1)
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=440869816]
+offset_left = 168.0
+offset_top = 152.0
+offset_right = 518.0
+offset_bottom = 502.0
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=599767252]
+handle_input_locally = false
+size = Vector2i(350, 350)
+render_target_update_mode = 4
+
+[node name="MonJeu" parent="SubViewportContainer/SubViewport" unique_id=1466058787 instance=ExtResource("2_melow")]
 
 [connection signal="pressed" from="Revenir" to="." method="_on_revenir_pressed"]
