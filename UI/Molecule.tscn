@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bs7h7kf0p6yp6"]
+
+[ext_resource type="Script" uid="uid://cdqsebmlpjhac" path="res://Scripts/Molecule.gd" id="1_8tg6i"]
+
+[node name="Node" type="Node" unique_id=1017065396]
+script = ExtResource("1_8tg6i")

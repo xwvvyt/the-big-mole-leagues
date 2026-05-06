@@ -73,7 +73,7 @@ func _on_item_list_item_clicked(index: int, at_position: Vector2, mouse_button_i
 		print(type_liaison)
 		var s = array_to_string(encore_un_array)
 		print(s)
-		temp_array.append(Liaisons.code_liaison[s])
+		#temp_array.append(Liaisons.code_liaison[s])
 		selected_a = null
 		selected_b = null
 		$LiaisonB.hide()

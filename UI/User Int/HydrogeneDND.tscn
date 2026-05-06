@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://bu6ydbo2k46n2"]
+
+[ext_resource type="Script" uid="uid://can0mmqujuyok" path="res://UI/User Int/atome_png.gd" id="1_h8pfw"]
+[ext_resource type="Texture2D" uid="uid://beuq55e24a6u2" path="res://UI/Icons/H.png" id="2_vuu1g"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kyc43"]
+size = Vector2(96, 96)
+
+[node name="HydrogenePNG" type="Node2D" unique_id=606138387]
+script = ExtResource("1_h8pfw")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=855358742]
+position = Vector2(48.000008, 48.000008)
+scale = Vector2(0.11510789, 0.11510789)
+texture = ExtResource("2_vuu1g")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=839174129]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1099938422]
+position = Vector2(48, 48)
+shape = SubResource("RectangleShape2D_kyc43")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

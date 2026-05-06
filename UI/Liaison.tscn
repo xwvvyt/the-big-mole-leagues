@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://pmk27yiiw8mj"]
+
+[ext_resource type="Script" uid="uid://dwbfy43fonnko" path="res://UI/Scripts/Liaison.gd" id="1_lpt2u"]
+
+[node name="Liaison" type="Node" unique_id=1501233062]
+script = ExtResource("1_lpt2u")

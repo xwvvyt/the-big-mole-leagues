@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bjmkba5848uql"]
+
+[ext_resource type="Script" uid="uid://dctqmjxrdgpay" path="res://UI/User Int/crafting_table.gd" id="1_4eu1i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qopxf"]
+size = Vector2(788.5, 330.5)
+
+[node name="crafting table" type="StaticBody2D" unique_id=1312228177 groups=["dropable"]]
+script = ExtResource("1_4eu1i")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1707850566]
+position = Vector2(444.25, 215.25)
+shape = SubResource("RectangleShape2D_qopxf")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1263443254]
+offset_right = 889.0
+offset_bottom = 431.0
+color = Color(0.87058824, 0.8666667, 0.9607843, 1)

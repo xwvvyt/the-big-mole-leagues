@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="drag and drop test"
-run/main_scene="uid://c5mktd160r615"
+run/main_scene="uid://cqv7v16tcl40r"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -19,9 +19,9 @@ config/icon="res://icon.svg"
 
 Inventaire="*uid://ck7f40u7d8r64"
 Element="*uid://drvjuo578an12"
-Molecule="*uid://d2j5xaiujbrdy"
-Liaisons="*uid://dwbfy43fonnko"
+Molecule="*uid://c3wqhdqjch5dc"
 global="*uid://dwsb8j2mp0q5g"
+Dragging="*uid://chyvl41orrkwo"
 
 [input]
 

@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://mdiofo1vka58"]
+
+[ext_resource type="Script" path="res://3D/molécule.gd" id="1_bsglm"]
+
+[node name="Molécule" type="Node3D" unique_id=58696008]
+script = ExtResource("1_bsglm")

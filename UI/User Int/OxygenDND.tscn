@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://d4jyki5k2i8gn"]
+
+[ext_resource type="Script" uid="uid://can0mmqujuyok" path="res://UI/User Int/atome_png.gd" id="1_mm4b7"]
+[ext_resource type="Texture2D" uid="uid://m03hvme5mpr1" path="res://UI/Icons/O.png" id="2_4jpkj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mm4b7"]
+size = Vector2(96, 96)
+
+[node name="OxygenPNG" type="Node2D" unique_id=564084494]
+script = ExtResource("1_mm4b7")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=112595294]
+position = Vector2(48.000004, 48.000004)
+scale = Vector2(0.115107924, 0.115107924)
+texture = ExtResource("2_4jpkj")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1678895471]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=567279571]
+position = Vector2(48, 48)
+shape = SubResource("RectangleShape2D_mm4b7")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]
