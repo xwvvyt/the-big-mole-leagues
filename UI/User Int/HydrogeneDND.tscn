@@ -1,23 +1,36 @@
 [gd_scene format=3 uid="uid://bu6ydbo2k46n2"]
 
-[ext_resource type="Script" uid="uid://can0mmqujuyok" path="res://User Int/atome_png.gd" id="1_h8pfw"]
-[ext_resource type="Texture2D" uid="uid://befk4b73srjrm" path="res://User Int/Hydrogen.png" id="2_0u10x"]
+[ext_resource type="Script" uid="uid://can0mmqujuyok" path="res://UI/User Int/atome_png.gd" id="1_h8pfw"]
+[ext_resource type="Texture2D" uid="uid://beuq55e24a6u2" path="res://UI/Icons/H.png" id="2_vuu1g"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vuu1g"]
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kyc43"]
-size = Vector2(108, 106)
+size = Vector2(96, 96)
 
 [node name="HydrogenePNG" type="Node2D" unique_id=606138387]
 script = ExtResource("1_h8pfw")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=855358742]
-position = Vector2(54, 53)
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("2_0u10x")
+[node name="Panel" type="Panel" parent="." unique_id=822144256]
+clip_children = 2
+offset_right = 96.0
+offset_bottom = 96.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_vuu1g")
+
+[node name="Sprite2D" type="Sprite2D" parent="Panel" unique_id=855358742]
+position = Vector2(48.000008, 48.000008)
+scale = Vector2(0.11510789, 0.11510789)
+texture = ExtResource("2_vuu1g")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=839174129]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1099938422]
-position = Vector2(54, 53)
+position = Vector2(48, 48)
 shape = SubResource("RectangleShape2D_kyc43")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

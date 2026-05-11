@@ -21,6 +21,8 @@ func _ready() -> void:
 	$EinsteinTesla.hide()
 	$Explosion.hide()
 	$Button/Boom.hide()
+	$vantHoff.hide()
+	$echec.hide()
 	hydrogen_instance = instHydrogen()
 	oxygen_instance = instOxygen()
 	carbon_instance = instCarbon()
@@ -62,31 +64,31 @@ func _process(delta):
 
 func instHydrogen():
 	var instance = hydrogenScene.instantiate()
-	instance.position = Vector2(1000, 25)
+	instance.position = Vector2(915, 80)
 	add_child(instance)
 	return instance
 
 func instOxygen():
 	var instance = oxygenScene.instantiate()
-	instance.position = Vector2(1000, 150)
+	instance.position = Vector2(1025, 80)
 	add_child(instance)
 	return instance
 
 func instCarbon():
 	var instance = carbonScene.instantiate()
-	instance.position = Vector2(1000, 275)
+	instance.position = Vector2(915, 200)
 	add_child(instance)
 	return instance
 
 func instNitrogen():
 	var instance = nitrogenScene.instantiate()
-	instance.position = Vector2(1000, 400)
+	instance.position = Vector2(1025, 200)
 	add_child(instance)
 	return instance
 
 func instSoufre():
 	var instance = soufreScene.instantiate()
-	instance.position = Vector2(1000, 525)
+	instance.position = Vector2(975, 320)
 	add_child(instance)
 	return instance
 
@@ -100,6 +102,12 @@ func _on_button_pressed() -> void:
 	$Button/Boom.play("default")
 	await $Button/Boom.animation_finished
 	$Button/Boom.hide()
+	
+	$EinsteinTesla.hide()
+	$Explosion.hide()
+	$CreationReussie.hide()
+	$vantHoff.hide()
+	$echec.hide()
 	reset = true
 
 func _on_creer_pressed() -> void:
@@ -116,8 +124,16 @@ func _on_creer_pressed() -> void:
 			Molecule.decouvertes.append(formule)
 			$EinsteinTesla.show()
 			$Explosion.show()
+			$vantHoff.hide()
+			$echec.hide()
 			return
+	
 	print("aucune molécule trouvée...")
+	$EinsteinTesla.hide()
+	$Explosion.hide()
+	$CreationReussie.hide()
+	$vantHoff.show()
+	$echec.show()
 
 func _on_annexe_pressed() -> void:
 	get_tree().change_scene_to_file('res://inventaire_scene.tscn')
